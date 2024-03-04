@@ -46,8 +46,8 @@ class Login:
             db_connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="priya",
-            database="trail")
+            password=".....",
+            database="---")
 
             cursor = db_connection.cursor()
 
@@ -115,8 +115,8 @@ class Login:
             db_connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="priya",
-            database="trail")
+            password="....",
+            database="----")
 
             cursor = db_connection.cursor()
 
@@ -241,7 +241,7 @@ class Login:
         if self.name.get()=="" or self.age.get()=="" or self.username=="" or self.password=="":
             messagebox.showerror('error', 'error enter details correctly')
         else:
-            conn = mysql.connector.connect(host="localhost",user="root",password="priya",database="trail")
+            conn = mysql.connector.connect(host="localhost",user="root",password=".....",database="----")
             my_cursor=conn.cursor()
             self.query = f"insert into student values('{self.name.get()}',{self.age.get()},'{self.username.get()}','{self.password.get()}')"
             my_cursor.execute(self.query)
@@ -256,7 +256,7 @@ class Login:
             messagebox.showerror('error', 'error enter details correctly')
         else:
             try:
-                conn = mysql.connector.connect(host="localhost",user="root",password="priya",database="trail")
+                conn = mysql.connector.connect(host="localhost",user="root",password=".....",database="----")
                 my_cursor=conn.cursor()
                 self.query = f"insert into sellar values('{self.name.get()}','{self.address.get()}','{self.mobileno.get()}','{self.username.get()}','{self.password.get()}')"
                 my_cursor.execute(self.query)
@@ -272,13 +272,13 @@ class Login:
         self.login_window=Frame(self.root, width=500, height=300,bg= 'white',borderwidth=4)
         self.login_window.place(x=100, y=50)
         self.root.title("Student Homepage")
-        signup_button = Button(self.login_window, text="Rushita Medical Shop",font= ('Arial', 11), command=lambda: self.details("rushita"),bg='white',fg='steel blue',width=30)
+        signup_button = Button(self.login_window, text="Rushita Medical Shop",font= ('Arial', 11), command=lambda: self.details("shop1"),bg='white',fg='steel blue',width=30)
         signup_button.place(x=110, y=50)
-        signup_button = Button(self.login_window, text="Yagna Medical Shop",font= ('Arial', 11), command=lambda: self.details("yagna"),bg='white',fg='steel blue',width=30)
+        signup_button = Button(self.login_window, text="Yagna Medical Shop",font= ('Arial', 11), command=lambda: self.details("shop2"),bg='white',fg='steel blue',width=30)
         signup_button.place(x=110, y=100)
-        signup_button = Button(self.login_window, text="Rupa Medical Shop",font= ('Arial', 11), command=lambda: self.details("sri"),bg='white',fg='steel blue',width=30)
+        signup_button = Button(self.login_window, text="Rupa Medical Shop",font= ('Arial', 11), command=lambda: self.details("shop3"),bg='white',fg='steel blue',width=30)
         signup_button.place(x=110, y=150)
-        signup_button = Button(self.login_window, text="Suryaja Medical Shop",font= ('Arial', 11), command=lambda: self.details("surya"),bg='white',fg='steel blue',width=30)
+        signup_button = Button(self.login_window, text="Suryaja Medical Shop",font= ('Arial', 11), command=lambda: self.details("shop4"),bg='white',fg='steel blue',width=30)
         signup_button.place(x=110, y=200)
 
         self.logout=Button(self.login_window,text="<",bg='white',fg='steel blue',font=('Arial',15),command=self.homestu)
@@ -315,8 +315,8 @@ class Login:
             db_connection = mysql.connector.connect(
                 host="localhost",
                 user="root",
-                password="priya",
-                database="trail")
+                password=".....",
+                database="----")
 
             cursor = db_connection.cursor()
 
@@ -346,8 +346,8 @@ class Login:
         db_connection = mysql.connector.connect(
                 host="localhost",
                 user="root",
-                password="priya",
-                database="trail")
+                password=".....",
+                database="-----")
 
         cursor = db_connection.cursor()
         query = f"delete from prescription where sellar='{self.seller}'"
@@ -377,51 +377,18 @@ class Login:
         db_connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="priya",
-            database="trail")
-
+            password="....",
+            database="----")
         cursor = db_connection.cursor()
-
         try:
-
             query = f"insert into prescription values('{prescription_content}','{self.user}','{seller_name}')"
             cursor.execute(query)
             db_connection.commit()
-
-            from twilio.rest import Client
-            if seller_name == "yagna":
-                account_sid = 'AC06b8aaaf5af6997fe99804e79afba25b'
-                auth_token = 'e341fa099a2b44c56a3907912846d0c4'
-
-                client = Client(account_sid, auth_token)
-
-                message = client.messages.create(
-                    body='Prescription submitted by a student. Please check your dashboard.',
-                    from_='+19413402187',  
-                    to='+919121981712'  
-                )
-            else:
-                account_sid = 'ACc387a4728181a627ebab970a44e1549e'
-                auth_token = 'a5d51a2ad741bbc7664c74db1731b5d5'
-
-                client = Client(account_sid, auth_token)
-
-                message = client.messages.create(
-                    body='Prescription submitted by a student. Please check your dashboard.',
-                    from_='++18705769918',  
-                    to='+917993441544'  
-                )
-
-            print('Prescription submitted and SMS sent successfully. SID:', message.sid)
-            print(message.body)
-
         except mysql.connector.Error as error:
             print("Error:", error)
-
         finally:
             if 'db_connection' in locals() or 'db_connection' in globals():
                 db_connection.close()
-
         self.stu_homepage()
 
     def homestu(self):
