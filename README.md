@@ -40,4 +40,7 @@ To run this project locally, follow these steps:
 
 ## Conclusion
 PillParcel simplifies medicine delivery for students by providing a structured, user-friendly platform for seamless prescription management and order fulfillment. By leveraging this system, students can access timely medical supplies, while sellers can efficiently process and deliver orders within the college campus.
+## Additional Resources
+For a detailed project overview, refer to the PillParcel Presentation:
+🔗 PillParcel(2).pdf
 
