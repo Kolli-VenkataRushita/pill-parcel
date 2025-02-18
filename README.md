@@ -13,6 +13,7 @@ PillParcel is an innovative online platform designed to streamline the process o
 ### 1) Sellers:
 - **Registration & Login**: Sellers can register on the platform and log in to manage orders.
 - **Prescription Handling**: Sellers can access submitted prescriptions and fulfill orders accordingly.
+- **Notify**: Sellers will be notified through a message upon any orders.
 - **Delivery Management**: Sellers are responsible for delivering medicines to the predefined campus location.
 
 ### 2) Students:
