@@ -1,35 +1,43 @@
-# PillParcel (Medicine Delivery System)
+# PillParcel: Medicine Delivery System
 
 ## Introduction
+PillParcel is an innovative online platform designed to streamline the process of delivering medicines to students within a predefined college campus. The system ensures a seamless interaction between two primary users: students and sellers. Sellers can efficiently manage prescriptions sent by students and deliver the prescribed medicine to the designated campus. Meanwhile, students can easily submit their prescriptions to a medical shop of their choice.
 
-The Medicine Delivery System is an online platform designed to streamline the process of delivering medicine to students within a predefined college campus. It provides a seamless interaction between two main users: students and sellers. Sellers can view prescriptions uploaded by students and deliver the prescribed medicine to the designated college campus. On the other hand, students can send prescriptions by selecting the required medicine and providing necessary details.
+## Key Features
+- **Prescription Management**: Sellers can view and process prescriptions submitted by students.
+- **Campus Delivery**: Medicines are delivered efficiently within the predefined college campus.
+- **Prescription Submission**: Students can upload their prescriptions and select a preferred medical shop.
 
-### Key Features
-- **Prescription Management**: Sellers can view prescriptions uploaded by students.
-- **Delivery to Campus**: Sellers can deliver medicine to the predefined college campus.
-- **Prescription Submission**: Students can submit prescriptions by selecting medicine and providing details.
-
-## Application Users
+## User Roles and Functionalities
 
 ### 1) Sellers:
-- **Signup**: Sellers can register on the platform by providing necessary details.
-- **Login**: Registered sellers can log in to access their dashboard.
-- **Prescription Handling**: Sellers can view prescriptions uploaded by students and fulfill orders accordingly.
-- **Delivery**: Sellers can deliver medicine to the predefined college campus.
+- **Registration & Login**: Sellers can register on the platform and log in to manage orders.
+- **Prescription Handling**: Sellers can access submitted prescriptions and fulfill orders accordingly.
+- **Delivery Management**: Sellers are responsible for delivering medicines to the predefined campus location.
 
 ### 2) Students:
-- **Signup/Login**: Students can create an account or login to access the platform.
-- **Prescription Submission**: Students can submit prescriptions by selecting medicine and providing necessary details.
-- **Order Tracking**: Students can track the status of their orders.
+- **Signup & Login**: Students can create an account or log in to access platform services.
+- **Prescription Upload**: Students can submit prescriptions by providing the required details.
 
-## File Structure
+## Project Structure
+The entire project is contained within a single Python file named `parcel.py`. This file includes all the necessary functionalities for running the PillParcel Medicine Delivery System.
 
-The entire project is contained within a single Python file named `parcel.py`. This file contains all the necessary code for running the Medicine Delivery System.
-
-## Installation
-
+## Installation & Setup
 To run this project locally, follow these steps:
 
-1. Clone this repository.
-2. Navigate to the project directory.
-3. Run the `parcel.py` file using a Python interpreter:
+1. **Clone the Repository**:
+   ```sh
+   git clone <repository_url>
+   ```
+2. **Navigate to the Project Directory**:
+   ```sh
+   cd PillParcel
+   ```
+3. **Run the Application**:
+   ```sh
+   python parcel.py
+   ```
+
+## Conclusion
+PillParcel simplifies medicine delivery for students by providing a structured, user-friendly platform for seamless prescription management and order fulfillment. By leveraging this system, students can access timely medical supplies, while sellers can efficiently process and deliver orders within the college campus.
+
